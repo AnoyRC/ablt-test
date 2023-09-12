@@ -4,7 +4,7 @@ const Wallet = () => {
   const connectWallet = async () => {
     const publicKey = 'hello';
 
-    const authUrl = `https://ably-backend.vercel.app/api/ably/getJWT?clientId=${publicKey}`;
+    const authUrl = `http://localhost:5000/api/ably/getJWT?clientId=${publicKey}`;
     const realtime = new Ably.Realtime({ authUrl });
 
     console.log('Requesting Ably JWT token from auth server.');
